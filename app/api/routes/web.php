@@ -22,3 +22,5 @@ $router->get('/hello', function () use ($router) {
 $router->get('/phpinfo', function () use ($router) {
     return phpinfo();
 });
+
+$router->get('/example', 'ExampleController@example');
