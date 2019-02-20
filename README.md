@@ -48,9 +48,9 @@ LOG_SLACK_WEBHOOK_URL=
 DB_CONNECTION=pgsql
 DB_HOST=lumen-postgres
 DB_PORT=5432
-DB_DATABASE=recipe_api
-DB_USERNAME=recipe_api_user
-DB_PASSWORD=RecipeApiPass123
+DB_DATABASE=<db-name-here>
+DB_USERNAME=<db-user-here>
+DB_PASSWORD=<db-user-password>
 
 CACHE_DRIVER=file
 QUEUE_CONNECTION=sync
