@@ -31,6 +31,36 @@ Create the application
 composer create-project --prefer-dist laravel/lumen my-app
 ```
 
+## Setup the database connection params
+
+Update the *.env* file in application root. Example:
+```
+APP_NAME=Lumen
+APP_ENV=local
+APP_KEY=
+APP_DEBUG=true
+APP_URL=http://localhost
+APP_TIMEZONE=UTC
+
+LOG_CHANNEL=stack
+LOG_SLACK_WEBHOOK_URL=
+
+DB_CONNECTION=pgsql
+DB_HOST=lumen-postgres
+DB_PORT=5432
+DB_DATABASE=recipe_api
+DB_USERNAME=recipe_api_user
+DB_PASSWORD=RecipeApiPass123
+
+CACHE_DRIVER=file
+QUEUE_CONNECTION=sync
+```
+  
+In *<app-root>/app.php* uncomment:
+```
+$app->withFacades();
+```
+
 ## Adjust the Configuration
 Find your ip address using *ifconfig* or *ipconfig*  
 
