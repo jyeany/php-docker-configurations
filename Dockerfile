@@ -11,6 +11,10 @@ COPY docker-php-ext-xdebug.ini /usr/local/etc/php/conf.d/docker-php-ext-xdebug.i
 
 RUN apt update
 
+RUN apt-get install -y libpq-dev
+
+RUN docker-php-ext-install pdo pdo_pgsql
+
 RUN apt install -y curl git unzip
 
 RUN cd ~
