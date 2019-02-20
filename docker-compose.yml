@@ -6,4 +6,13 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./app:/var/www/html  
+      - ./app:/var/www/html 
+    depends_on:
+      - lumen-postgres 
+  lumen-postgres:
+    image: "postgres:11.2"
+    container_name: "lumen-postgres"
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: LumenPass123
