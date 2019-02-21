@@ -26,4 +26,3 @@ RUN php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 RUN composer global require "laravel/lumen-installer"
 
 COPY apache2.conf /etc/apache2/apache2.conf
-# RUN composer create-project --prefer-dist laravel/lumen blog

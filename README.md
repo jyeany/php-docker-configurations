@@ -92,3 +92,13 @@ https://marketplace.visualstudio.com/items?itemName=felixfbecker.php-debug
     }
 }
 ```
+
+## Unit test execution
+  
+The *phpunit* executable is not added to the path automatically by the *composer create-project* command.  
+In order to have it accessible without adding its path within the project, */vendor/bin/phpunit*, use the following:
+```
+ln -s /var/www/html/<your-app-name>/vendor/bin/phpunit /usr/bin/phpunit
+```
+
+Unit tests can be debugged using the same launch.json as the application, just run *phpunit* and place a breakpoint.
