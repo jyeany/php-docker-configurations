@@ -6,7 +6,7 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./app:/var/www/html 
+      - ./src:/var/www/html 
     depends_on:
       - lumen-postgres 
   lumen-postgres:
