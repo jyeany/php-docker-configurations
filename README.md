@@ -88,7 +88,7 @@ https://marketplace.visualstudio.com/items?itemName=felixfbecker.php-debug
     "request": "launch",
     "port": 9000,    
     "pathMappings": {
-        "/var/www/html": "${workspaceRoot}/app"    
+        "/var/www/html": "${workspaceRoot}/src"    
     }
 }
 ```
