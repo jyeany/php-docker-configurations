@@ -1,5 +1,5 @@
-FROM php:7.2.15-apache
-RUN pecl install xdebug-2.6.1 \
+FROM php:7.3.3-apache
+RUN pecl install xdebug-2.7.0 \
     && docker-php-ext-enable xdebug \
     && mkdir /remote-log \
     && touch /remote-log/remote.log \

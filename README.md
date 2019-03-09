@@ -31,6 +31,18 @@ Create the application
 composer create-project --prefer-dist laravel/lumen my-app
 ```
 
+## Make sure lumen is running
+
+Visit:
+```
+http://localhost/my-app/public/
+```
+
+Expected output:
+```
+Lumen (5.8.0) (Laravel Components 5.8.*)
+```
+
 ## Setup the database connection params
 
 Update the *.env* file in application root. Example:
