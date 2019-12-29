@@ -1,5 +1,5 @@
-FROM php:7.3.3-apache
-RUN pecl install xdebug-2.7.0 \
+FROM php:7.4.1-apache
+RUN pecl install xdebug-2.9.0 \
     && docker-php-ext-enable xdebug \
     && mkdir /remote-log \
     && touch /remote-log/remote.log \
@@ -14,6 +14,8 @@ RUN apt update
 RUN apt-get install -y libpq-dev
 
 RUN docker-php-ext-install pdo pdo_pgsql
+
+RUN apt-get install -y zlib1g-dev libzip-dev && docker-php-ext-install zip
 
 RUN apt install -y curl git unzip
 

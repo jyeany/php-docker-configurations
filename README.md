@@ -40,7 +40,7 @@ http://localhost/my-app/public/
 
 Expected output:
 ```
-Lumen (5.8.0) (Laravel Components 5.8.*)
+Lumen (6.2.0) (Laravel Components ^6.0)
 ```
 
 ## Setup the database connection params
