@@ -1,0 +1,9 @@
+version: '3.6'
+services:
+  first-debug:
+    build: .
+    container_name: first-debug
+    ports:
+      - "80:80"
+    volumes:
+      - ./app:/var/www/html
