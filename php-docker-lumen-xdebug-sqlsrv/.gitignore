@@ -1,0 +1,6 @@
+
+# MacOS indexing file
+.DS_Store
+
+# VS code settings
+launch.json

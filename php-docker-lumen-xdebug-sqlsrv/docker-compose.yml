@@ -1,0 +1,25 @@
+version: '3.7'
+services:
+  lumen-api-sqlsrv:
+    build: .
+    container_name: lumen-api-sqlsrv
+    environment:
+      XDEBUG_REMOTE_ENABLE: 1
+      XDEBUG_REMOTE_CONNECT_BACK: 0
+      XDEBUG_REMOTE_AUTOSTART: 1 
+      XDEBUG_REMOTE_HOST: <your-ip-address>
+      XDEBUG_REMOTE_PORT: 9000 
+    ports:
+      - "5000:80"
+    volumes:
+      - ./src:/var/www/site 
+    depends_on:
+      - lumen-sqlsrv 
+  lumen-sqlsrv:
+    image: "mcr.microsoft.com/mssql/server:latest"
+    container_name: "lumen-sqlsrv"
+    ports:
+      - "1433:1433"
+    environment:
+      SA_PASSWORD: SaLumenSqlSrv1234
+      ACCEPT_EULA: Y
